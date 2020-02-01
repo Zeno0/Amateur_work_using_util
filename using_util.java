@@ -25,39 +25,35 @@ import java.util.TreeMap;
 import java.util.Vector;
 import java.util.concurrent.*;
 
-
-class e {
-
+class student{                        //this class is used by TreeMap, it acts as a custom class to extend 'tm' variable 
+                                      //it is used in line 411
     
-    public String toString(){
-        return "BLAAAAAAAAAAAAAAAAAAAAAAAAA";
-    }
-    
-}
-
-
-class student{
-    int roll;
+    int roll;                         
     String name,country;
+    
+    //constructor
+    
     student(int roll,String name ,String country){
         this.roll = roll;
         this.country = country;
         this.name = name;
-    }
+    } 
     public String toString(){
         return this.roll+" "+this.name+" "+this.country;
     }
+           
+}  // closing student class
+
+
+class sortbyroll implements Comparator<student>{    // this class is used to provide custom comparator in line 411
     
-     
-            
-}
-class sortbyroll implements Comparator<student>{
       public  int compare(student a, student b){
             return a.roll-b.roll;
         }
-    }
+    
+    }  // closing sortbyroll class
 
- class helper extends TimerTask{
+ class helper extends TimerTask{         // this class is used as a task for TimerTask class in line 387
     
 static int i=0;
 public void run(){
@@ -67,27 +63,23 @@ public void run(){
             using_util.obj.notify();
         }
     }
-}
-   
-    
-}
+}  // closing run method
+   }  // closing helper class 
 
-public class using_util {
+public class using_util {             // class with main thread
 
     static using_util obj;
     
-    public enum CFG{
+    public enum CFG{              // this class required by the EnumMap class as the 'keys' in 
+                                  // EnumMap must be keys of a single enum type
     code,contribute,quiz,mcq;
 }
     
     
     public static void main (String args[])  throws Exception{
-        System.out.println("Abstract queue start.........................................................................");
-AbstractQueue<Integer> aq= new LinkedBlockingQueue<Integer>();
-AbstractQueue<String> ap= new LinkedBlockingQueue<String>();
-ap.add("anime rocks");
-System.out.println(ap);
-aq.add(10);
+System.out.println("Abstract queue start.........................................................................");
+AbstractQueue<Integer> aq= new LinkedBlockingQueue<Integer>();  //initialized
+aq.add(10);    //add data in queue
 aq.add(20);
 aq.add(30);
 aq.add(40);
@@ -95,7 +87,6 @@ aq.add(50);
 aq.add(60);
 aq.add(70);
 System.out.println(aq);
-System.out.println(aq.element());
 //aq.clear();
 System.out.println(aq.peek());
 System.out.println(aq);
@@ -443,8 +434,47 @@ System.out.println(tm.navigableKeySet());
 
 
 Vector v = new Vector();
+Vector v1 = new Vector();
 
-System.out.println("ANIME");
+v1.add(1);
+v1.add(2);
+
+v.add(1);
+v.add("boku");
+v.add("☻");
+System.out.println(v);
+v.add(0,2);
+v.add(1,"I");
+v.add(0,0);
+v.add(1);
+System.out.println(v);
+System.out.println(v1);
+System.out.println(v.get(5));
+System.out.println(v.indexOf(1));
+System.out.println(v.lastIndexOf(1));
+System.out.println(v.capacity());
+v.trimToSize();
+System.out.println(v.capacity());
+v.setElementAt(1, 0);
+
+System.out.println(v);
+v.retainAll(v1);
+System.out.println(v);
+Iterator i = v.iterator();
+while(i.hasNext()){
+    System.out.println(i.next());
+}
+
+Integer arrh[] = new Integer[v1.size()];
+v1.copyInto(arrh);
+
+for(Integer n : arrh){
+    System.out.println(n);
+}
+System.out.println("Vector end...........................................");
+
+
+
         
     }
     
