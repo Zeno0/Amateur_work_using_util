@@ -70,7 +70,7 @@ public class using_util {             // class with main thread
 
     static using_util obj;
     
-    public enum CFG{              // this class required by the EnumMap class as the 'keys' in 
+    public enum CFG{              // this class is required by the EnumMap class as the 'keys' in 
                                   // EnumMap must be keys of a single enum type
     code,contribute,quiz,mcq;
 }
@@ -86,50 +86,47 @@ aq.add(40);
 aq.add(50);
 aq.add(60);
 aq.add(70);
-System.out.println(aq);
+System.out.println("data in abstract queue "+aq);
 //aq.clear();
-System.out.println(aq.peek());
-System.out.println(aq);
-System.out.println(aq.contains(110));
-System.out.println(aq.poll());
-System.out.println(aq);
-System.out.println(aq.peek());
-System.out.println(aq.size());
-aq.remove();
-System.out.println(aq);
+System.out.println("peeking at Abstract queue "+aq.peek());
+System.out.println("state of abstract queue after after peek() method "+aq);
+System.out.println("boolean method of abstract queue : does it contain 110 ? "+aq.contains(110));
+System.out.println("poll method of abstract queue "+aq.poll());
+System.out.println("state of abstract queue after after poll() method "+aq);
+System.out.println("size of abstract queue "+aq.size());
+System.out.println("using remove method of abstract queue "+aq.remove());
+System.out.println("present state of abstract queue"+aq);
 
 
     System.out.println("Abstract queue start.........................................................................");
 
     
 
-//import java.util.Arrays;    to use it directly call array
+
 
     System.out.println("Array List start.........................................................................");
-ArrayList<Integer> al = new ArrayList<Integer>(5);
+ArrayList<Integer> al = new ArrayList<Integer>(5); //initilazied Arraylist
 ArrayList<Integer> al1 = new ArrayList<Integer>(5);
-al1.add(0);
+al1.add(0);  // add data
 al1.add(10);
 al1.add(14);
 for(int i=0;i<5;i++){
     al.add(i);
 }
-System.out.println(al);
-al.set(3, 10);
-System.out.println(al);
-System.out.println(al.contains(9));
-System.out.println(al.indexOf(0));
-System.out.println(al.clone());
-al.forEach((x) -> System.out.println(x));
-al1.forEach((x) -> System.out.println(x));
-al.retainAll(al1);
-al1.retainAll(al);
-System.out.println(al);
-System.out.println(al1);
+System.out.println("data in array list(al1) "+al1);
+System.out.println("data in array list(al) "+al);
+al.set(3, 10);  
+System.out.println("(al)Array list after using set(index,data) method "+al);
+System.out.println("boolean function : does it(al) contain 9? "+al.contains(9));
+System.out.println("what is the index of '0' data in array list(al) "+al.indexOf(0));
+System.out.println("displaying all the contents of (al)array list one by one");
+al.forEach((x) -> System.out.println(x));   // using forEach loop
+al.retainAll(al1);  
+System.out.println("(al)array list after using retain method(basicly union of two) "+al);
 
 System.out.println("Array List end.........................................................................");
 System.out.println("BitSet start.........................................................................");
-BitSet bs = new BitSet();
+BitSet bs = new BitSet();  
 bs.set(1);
 bs.set(2);
 bs.set(3);
@@ -209,7 +206,6 @@ for(Enumeration i=d1.keys();i.hasMoreElements();){
     System.out.println(i.nextElement());
 }
 
-System.out.println(new e());
 System.out.println("Dictionary start.........................................................................");
 System.out.println("EnumMap start.........................................................................");
 
