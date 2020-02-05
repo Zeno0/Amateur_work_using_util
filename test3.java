@@ -22,9 +22,7 @@ System.out.println("Dictionary(d) after removing roll number '123' "+d);
 System.out.println("Printing contents of dictionary(d1)");
 for(Enumeration i=d1.keys(),e=d1.elements();i.hasMoreElements();){
     System.out.println(i.nextElement()+" "+e.nextElement());
-}ot included
-System.out.println("bs after using clear() method"+bs);
-    
+}   
  }
 
 }
