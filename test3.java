@@ -1,5 +1,6 @@
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.Enumeration;
 public class test3{
  public static void main (String args[]){
     
