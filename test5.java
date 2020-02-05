@@ -1,6 +1,6 @@
 
 import java.util.EnumSet;
-public enum CFG{              // this class is required by the EnumMap class as the 'keys' in 
+enum CFG{              // this class is required by the EnumMap class as the 'keys' in 
                                   // EnumMap must be keys of a single enum type
    
     CODE,CONTRIBUTE,QUIZ,MCQ;
