@@ -24,4 +24,7 @@ System.out.println("using remove method of abstract queue "+aq.remove());
 System.out.println("present state of abstract queue"+aq);
 
     }
-}
+
+
+	
+	 }

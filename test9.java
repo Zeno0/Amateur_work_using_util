@@ -1,6 +1,7 @@
 import java.util.StringTokenizer;
 public class test9{
  public static void main (String args[]){
+     
 StringTokenizer st = new StringTokenizer(" Welcome: To: The: Another: World",":"); //initialized with input string and token
 
 
